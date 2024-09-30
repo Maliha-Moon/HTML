@@ -1,0 +1,165 @@
+<!-- *------------------------------------- -->
+<!--* HTML FORM TAG  
+<!-- *---------------------------------------- -->
+
+<!--? The <form> tag is used to create an HTML form for user input. -->
+
+<!--? The <input> HTML element is used to create interactive controls for web-based forms to accept data from the user. We must write inside the tag. -->
+
+<!-- *------------------------------------- -->
+<!--* HTML Types of inputs in HTML Form
+<!-- *---------------------------------------- -->
+
+<!-- 1: Text Input (<input type="text" />): Allows users to enter a single line of
+text. 
+
+2: Password Input (<input type="password" />): Hides the entered text for
+secure password entry. 
+
+3: Email Input (<input type="email" />): Validates and
+formats input as an email address. 
+
+4:Number Input (<input type="number" />):
+Accepts numeric input and provides increment/decrement controls. 
+
+5:Radio Buttons (<input type="radio" />): Allows users to choose a single option from a group of
+options. 
+
+6: Checkboxes (<input type="checkbox" />): Allows users to select
+multiple options. 
+
+7: Dropdowns (<select> and <option>): Provides a list of options for users to choose from.
+  
+8: <datalist> Provide a predefined list of options for autocomplete suggestions.
+
+9: Textarea (<textarea>): Allows users to enter multiple lines of text.
+
+10:File Upload (<input type="file">):  Lets users choose and upload files from their device.
+
+11: Submit Button (<input type="submit">):  Submits the form data to the server. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Urbanist:wght@300;400;600;700;800;900&display=swap");
+
+  html {
+    font-family: "jost", sans-serif;
+    background-color: #efefef;
+  }
+
+  h1 {
+    font-weight: bold;
+  }
+</style>
+
+<body>
+  <h1>HTML FORM</h1>
+  <!-- Add Form Here -->
+  <form>
+    <div>
+      <label for="username">username</label>
+      <input type="text" id="username" />
+    </div>
+
+    <div>
+      <label for="password">password</label>
+      <input type="password" id="'password" placeholder="Enter your password" required/>
+    </div>
+
+    <div>
+      <label for="email">email</label>
+      <input type="email" id="email" />
+    </div>
+
+    <div>
+      <label for="number">number</label>
+      <input type="number" id="number" max="10" min="1" value="5" />
+    </div>
+
+    <div>
+      <label for="gender">Gender</label>
+      <input type="radio" name="gender" value="male" /> male
+      <input type="radio" name="gender" value="female" /> female
+    </div>
+
+    <div>
+      <label for="Hobbies">Hobbies: </label>
+      <input type="checkbox" name="interest" value="Draw" /> Draw
+      <input type="checkbox" name="interest" value="Sports" /> Sports
+    </div>
+
+    <div>
+      <label for="country">Select fav country: </label>
+      <select name="country" id="country">
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="Canada">Canada</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="favcountry">fav country: </label>
+      <input type="text" id="favcountry" name="country" list="countries"/>
+      <datalist id="countries">
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="Canada">Canada</option>
+      </datalist>
+    </div>
+
+    <div>
+      <label for="description">About yourself: </label>
+     
+      <textarea
+      name="descriptions" 
+      rows="10" 
+      cols="50"
+      placeholder="Write somethong about yourself">
+    </textarea>
+    </div>
+
+    <div>
+      <label for="files">Select File: </label>
+      <input type="file" name="fileUpload"/>
+    </div>
+
+    <div>
+      <input type="submit" value="Submit" />
+       <!--or-->
+       <button type="submit">Submit</button>
+    </div>
+
+   
+  </form>
+</body>
+
+</html>
+
+<!--******************************************************-->
+<!-- *HTML input Attributes
+<!-- *------------------------------------------------- -->
+
+<!-- 1.The value Attribute
+   The input value attribute specifies an initial value for an input field
+   
+   2. The min and max Attributes
+The input min and max attributes specify the minimum and maximum values for an input field.
+
+  3. name attributes
+   group multiple radio buttons together, ensuring that only one radio button from the group can be selected at a time.
+   ? ** store data in backend **
+
+   4.The input list attribute 
+   refers to a <datalist> element that contains pre-defined options for an <input> element.
+
+    5. The placeholder Attribute
+    specifies a short hint that describes the expected value of an input field
+    The short hint is displayed in the input field before the user enters a value.
+-->
